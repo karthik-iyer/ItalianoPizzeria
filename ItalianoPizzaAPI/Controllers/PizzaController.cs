@@ -1,7 +1,10 @@
 using System;
 using System.Linq;
+using System.Threading.Tasks;
+using AutoMapper;
 using ItalianoPizzaAPI.Data;
 using ItalianoPizzaAPI.Data.Entities;
+using ItalianoPizzaAPI.Model;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -12,34 +15,39 @@ namespace ItalianoPizzaAPI.Controllers
     [ApiController]
     public class PizzaController : ControllerBase
     {
-        private readonly PizzaContext _context;
-       
+        private readonly IPizzaRepository _repository;
+        private readonly IMapper _mapper;
 
-        public PizzaController(PizzaContext context)
+        public PizzaController(IPizzaRepository repository, IMapper mapper)
         {
-            _context = context;
-           
+            _repository = repository;
+            _mapper = mapper;
         }   
 
         [HttpGet]
         [Route("pizzas")]
-        public ActionResult GetAllPizzas()
+        public async Task<ActionResult<PizzaModel[]>> GetAllPizzas()
         {
             try
             {
-                var results = _context.Pizzas.Join(
-                    _context.PizzaIngredients,
-                    pizza => pizza.PizzaId,
-                    pizzaIngredient => pizzaIngredient.PizzaId,
-                    (pizza,pizzaIngredient) => new {
-                        PizzaID = pizza.PizzaId,
-                        PizzaName = pizza.Name,
-                        PizzaDoughType = pizza.DoughType,
-                        isCalzone = pizza.isCalzone,
-                        pizzaIngredients = pizzaIngredient.Ingredient.Name 
-                    }
-                );
-                return Ok(results);                
+                var results = await _repository.GetAllPizzasAsync();
+                return _mapper.Map<PizzaModel[]>(results);                
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Database failure");
+            }
+        }
+
+        [HttpGet]
+        [Route("pizzas/{PizzaName}")]
+        public async Task<ActionResult<PizzaModel>> GetPizzaByName(string PizzaName)
+        {
+            try
+            {
+                var decodedName = System.Uri.UnescapeDataString(PizzaName);
+                var results = await _repository.GetPizzaAsync(decodedName);
+                return _mapper.Map<PizzaModel>(results);                
             }
             catch (Exception)
             {
@@ -49,11 +57,12 @@ namespace ItalianoPizzaAPI.Controllers
 
         [HttpGet]
         [Route("ingredients")]
-        public ActionResult GetAllIngredients()
+        public async Task<ActionResult<IngredientModel[]>> GetAllIngredients()
         {
             try
             {
-                var results = _context.Ingredients.ToList();
+                var results = await _repository.GetAllIngredientsAsync();
+                _mapper.Map<IngredientModel[]>(results);
                 return Ok(results);                
             }
             catch (Exception)
@@ -65,19 +74,27 @@ namespace ItalianoPizzaAPI.Controllers
 
         [HttpPost]
         [Route("pizzas")]
-        public ActionResult Post(Pizza pizza)
+        public async Task<ActionResult<PizzaModel>> Post(PizzaModel pizzaModel)
         {
             try
             {
-                var existingPizza = _context.Pizzas.Where(x => x.Name == pizza.Name).FirstOrDefault();
+                var existingPizza = await _repository.GetPizzaAsync(System.Uri.UnescapeDataString(pizzaModel.PizzaName));
                
                 if(existingPizza != null)
                 {
-                    return StatusCode(StatusCodes.Status400BadRequest, $"Pizza already exists. Please choose a different name : {pizza.Name}");
+                    return BadRequest( $"Pizza already exists. Please choose a different name : {pizzaModel.PizzaName}");
                 }
 
-                _context.Pizzas.Add(pizza);
-                _context.SaveChanges();
+                //Create a new Pizza 
+
+                var pizza = _mapper.Map<Pizza>(pizzaModel);
+
+                _repository.Add(pizza);
+                
+                if(await _repository.SaveChangesAsync())
+                {
+                    return Created("",_mapper.Map<PizzaModel>(pizza));
+                };
 
                 return Ok();                
             }
@@ -88,53 +105,54 @@ namespace ItalianoPizzaAPI.Controllers
         }
 
         [HttpPut]
-        [Route("pizzas/{PizzaId:int}")]
-        public ActionResult Put(Pizza pizza, int PizzaId)
+        [Route("pizzas/{PizzaName}")]
+        public async Task<ActionResult<PizzaModel>> Put(string PizzaName, PizzaModel pizzaModel)
         {
             try
             {
-                var existingPizza = _context.Pizzas.Where(x => x.PizzaId == PizzaId).FirstOrDefault();
+                var decodedName = System.Uri.UnescapeDataString(PizzaName);
+                var existingPizza = await _repository.GetPizzaAsync(PizzaName);
 
-                if(existingPizza == null)
-                {
-                    return StatusCode(StatusCodes.Status400BadRequest, "Pizza does not exists. Please choose existing pizza to update");
-                }
+                if(existingPizza == null) return NotFound($"Could not find Pizza with Name {pizzaModel.PizzaName}");
 
-                existingPizza = pizza;
-                existingPizza.PizzaIngredients = pizza.PizzaIngredients;
-                _context.Pizzas.Update(existingPizza);
-                _context.SaveChanges();
+                _mapper.Map(pizzaModel,existingPizza);
 
-                return Ok();                
+               if(await _repository.SaveChangesAsync())
+               {
+                   return _mapper.Map<PizzaModel>(existingPizza);
+               }
             }
             catch (Exception ex)
             {
                 return StatusCode(StatusCodes.Status500InternalServerError, $"Database failure {ex.ToString()}");
             }
+            return BadRequest();
         }
 
         [HttpDelete]
-        [Route("pizzas/{PizzaId:int}")]
-        public ActionResult Delete(int PizzaId)
+        [Route("pizzas/{PizzaName}")]
+        public async Task<IActionResult> Delete(string PizzaName)
         {
             try
             {
-                var existingPizza = _context.Pizzas.Where(x => x.PizzaId == PizzaId).FirstOrDefault();
+                var decodedName = System.Uri.UnescapeDataString(PizzaName);
+                var existingPizza = await _repository.GetPizzaAsync(decodedName);
 
-                if(existingPizza == null)
+                if(existingPizza == null) return NotFound($"Could not find Pizza with Name {decodedName}");
+
+                _repository.Delete(existingPizza);
+
+                if(await _repository.SaveChangesAsync())
                 {
-                    return StatusCode(StatusCodes.Status400BadRequest, "Pizza does not exists. Please choose existing pizza to delete");
+                   return Ok();
                 }
-
-                _context.Pizzas.Remove(existingPizza);
-                _context.SaveChanges();
-
-                return Ok();                
             }
             catch (Exception)
             {
                 return StatusCode(StatusCodes.Status500InternalServerError, "Database failure");
             }
+
+            return BadRequest("Failed to Delete Pizza");
         }
     }
 }
