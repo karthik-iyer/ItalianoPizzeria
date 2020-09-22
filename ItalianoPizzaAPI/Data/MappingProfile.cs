@@ -25,11 +25,11 @@ namespace ItalianoPizzaAPI.Data
             .ForMember(m => m.isCalzone, o => o.MapFrom(src => src.IsCalzone))
             .ForMember(m => m.PizzaIngredients, o =>  o.MapFrom(src => MapPizzaIngredientsModelToPizzaIngredients(src.PizzaId, src.PizzaIngredientsModel)));
 
-            CreateMap<IngredientModel,Ingredient>()
+            CreateMap<Ingredient,IngredientModel>()
             .ForMember(m => m.IngredientId, o => o.MapFrom(src => src.IngredientId))
             .ForMember(m => m.Name, o => o.MapFrom(src => src.Name))
-            .ForMember(m => m.Type, o => o.MapFrom(src => src.Type))
-            .ForMember(m => m.PizzaIngredients, opt => opt.Ignore());
+            .ForMember(m => m.Type, o => o.MapFrom(src => src.Type));
+
         }
 
         private List<PizzaIngredientsModel> MapPizzaIngredientsToPizzaIngredientsModel(ICollection<PizzaIngredient> pizzaIngredients)

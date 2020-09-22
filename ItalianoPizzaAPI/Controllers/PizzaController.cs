@@ -26,6 +26,10 @@ namespace ItalianoPizzaAPI.Controllers
 
         [HttpGet]
         [Route("pizzas")]
+        /// <summary>
+        /// The method gets all the pizzas in the DB
+        /// </summary>
+        /// <returns>List of Pizzas</returns>
         public async Task<ActionResult<PizzaModel[]>> GetAllPizzas()
         {
             try
@@ -41,12 +45,20 @@ namespace ItalianoPizzaAPI.Controllers
 
         [HttpGet]
         [Route("pizzas/{PizzaName}")]
+        /// <summary>
+        /// Get Pizza by Pizza Name
+        /// </summary>
+        /// <param name="PizzaName"></param>
+        /// <returns>Returns Pizza by Pizza Name</returns>
         public async Task<ActionResult<PizzaModel>> GetPizzaByName(string PizzaName)
         {
             try
             {
                 var decodedName = System.Uri.UnescapeDataString(PizzaName);
                 var results = await _repository.GetPizzaAsync(decodedName);
+                
+                if(results == null) return BadRequest($"Pizza Not Found . Pizza Name {PizzaName}");
+
                 return _mapper.Map<PizzaModel>(results);                
             }
             catch (Exception)
@@ -57,13 +69,16 @@ namespace ItalianoPizzaAPI.Controllers
 
         [HttpGet]
         [Route("ingredients")]
+        /// <summary>
+        /// Gets list of Predefined Ingredients in the system
+        /// </summary>
+        /// <returns>List of Ingredients</returns>
         public async Task<ActionResult<IngredientModel[]>> GetAllIngredients()
         {
             try
             {
                 var results = await _repository.GetAllIngredientsAsync();
-                _mapper.Map<IngredientModel[]>(results);
-                return Ok(results);                
+                return Ok(_mapper.Map<IngredientModel[]>(results));                
             }
             catch (Exception)
             {
@@ -74,6 +89,11 @@ namespace ItalianoPizzaAPI.Controllers
 
         [HttpPost]
         [Route("pizzas")]
+        /// <summary>
+        /// Creates a new Pizza
+        /// </summary>
+        /// <param name="pizzaModel"></param>
+        /// <returns>Returns Success upon creation or Failure upon unSuccessful creation</returns>
         public async Task<ActionResult<PizzaModel>> Post(PizzaModel pizzaModel)
         {
             try
@@ -107,6 +127,12 @@ namespace ItalianoPizzaAPI.Controllers
 
         [HttpPut]
         [Route("pizzas/{PizzaName}")]
+        /// <summary>
+        /// Updates an existing Pizza
+        /// </summary>
+        /// <param name="PizzaName"></param>
+        /// <param name="pizzaModel"></param>
+        /// <returns>Returns an updated Pizza</returns>
         public async Task<ActionResult<PizzaModel>> Put(string PizzaName, PizzaModel pizzaModel)
         {
             try
@@ -133,6 +159,11 @@ namespace ItalianoPizzaAPI.Controllers
 
         [HttpDelete]
         [Route("pizzas/{PizzaName}")]
+        /// <summary>
+        /// Deletes a Pizza
+        /// </summary>
+        /// <param name="PizzaName"></param>
+        /// <returns>Returns success or failure</returns>
         public async Task<IActionResult> Delete(string PizzaName)
         {
             try
@@ -146,7 +177,7 @@ namespace ItalianoPizzaAPI.Controllers
 
                 if(await _repository.SaveChangesAsync())
                 {
-                   return Ok();
+                   return Ok($"Pizza {decodedName} Deleted Successfully");
                 }
             }
             catch (Exception)

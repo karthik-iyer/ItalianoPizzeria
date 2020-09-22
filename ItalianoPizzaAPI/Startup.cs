@@ -41,6 +41,30 @@ namespace ItalianoPizzaAPI
 
             services.AddSingleton(mapper);
 
+            services.AddSwaggerDocument(config =>
+            {
+                config.PostProcess = document =>
+                {
+                    document.Info.Version = "v1";
+                    document.Info.Title = "Italiano Pizza";
+                    document.Info.Description = "Italiano Pizzeria API to add new Pizzas";
+                    document.Info.TermsOfService = "None";
+                    document.Info.Contact = new NSwag.OpenApiContact
+                    {
+                        Name = "Karthik Iyer",
+                        Email = string.Empty,
+                        Url = "https://www.linkedin.com/in/karthikiyer1304"
+                    };
+                    document.Info.License = new NSwag.OpenApiLicense
+                    {
+                        Name = "Open Source",
+                        Url = string.Empty
+                    };
+                };
+            }); 
+
+            services.AddSwaggerGen();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -50,6 +74,9 @@ namespace ItalianoPizzaAPI
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseOpenApi();
+            app.UseSwaggerUi3();
 
             app.UseHttpsRedirection();
 
