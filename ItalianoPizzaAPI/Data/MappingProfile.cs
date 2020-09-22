@@ -11,22 +11,19 @@ namespace ItalianoPizzaAPI.Data
     {
         public MappingProfile()
         {
-            CreateMap<PizzaModel,Pizza>()
-            .ForMember(m => m.Name, o => o.MapFrom(src => src.PizzaName))
-            .ForMember(m => m.PizzaIngredients, o => o.MapFrom(src => MapPizzaIngredientsModelToPizzaIngredients(src.PizzaId,src.PizzaIngredientsModel)));
-
-
             CreateMap<Pizza,PizzaModel>()
             .ForMember(m => m.PizzaName, o => o.MapFrom(src => src.Name))
-            .ForMember(m => m.PizzaIngredientsModel, o => o.MapFrom(src => MapPizzaIngredientsToPizzaIngredientsModel(src.PizzaId,src.PizzaIngredients)));
+            .ForMember(m => m.PizzaId, o => o.MapFrom(src => src.PizzaId))
+            .ForMember(m => m.DoughType, o => o.MapFrom(src => src.DoughType))
+            .ForMember(m => m.IsCalzone, o => o.MapFrom(src => src.isCalzone))
+            .ForMember(m => m.PizzaIngredientsModel, o => o.MapFrom(src => MapPizzaIngredientsToPizzaIngredientsModel(src.PizzaIngredients)));
 
-            CreateMap<PizzaIngredientsModel,PizzaIngredient>()
-            .ForMember(m => m.Ingredient, opt => opt.Ignore())
-            .ForMember(m => m.Pizza, opt => opt.Ignore());
-
-            CreateMap<PizzaIngredient,PizzaIngredientsModel>()
-            .ForMember(m => m.IngredientName, o => o.MapFrom(src => src.Ingredient.Name));               
-                   
+            CreateMap<PizzaModel,Pizza>()
+            .ForMember(m => m.Name, o => o.MapFrom(src => src.PizzaName))
+            .ForMember(m => m.PizzaId, o => o.MapFrom(src => src.PizzaId))
+            .ForMember(m => m.DoughType, o => o.MapFrom(src => src.DoughType))
+            .ForMember(m => m.isCalzone, o => o.MapFrom(src => src.IsCalzone))
+            .ForMember(m => m.PizzaIngredients, o =>  o.MapFrom(src => MapPizzaIngredientsModelToPizzaIngredients(src.PizzaId, src.PizzaIngredientsModel)));
 
             CreateMap<IngredientModel,Ingredient>()
             .ForMember(m => m.IngredientId, o => o.MapFrom(src => src.IngredientId))
@@ -35,7 +32,7 @@ namespace ItalianoPizzaAPI.Data
             .ForMember(m => m.PizzaIngredients, opt => opt.Ignore());
         }
 
-        private List<PizzaIngredientsModel> MapPizzaIngredientsToPizzaIngredientsModel(int pizzaId, ICollection<PizzaIngredient> pizzaIngredients)
+        private List<PizzaIngredientsModel> MapPizzaIngredientsToPizzaIngredientsModel(ICollection<PizzaIngredient> pizzaIngredients)
         {
             var pizzaIngredientsModel = new List<PizzaIngredientsModel>();
 

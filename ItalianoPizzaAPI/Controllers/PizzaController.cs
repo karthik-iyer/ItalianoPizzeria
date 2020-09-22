@@ -93,7 +93,8 @@ namespace ItalianoPizzaAPI.Controllers
                 
                 if(await _repository.SaveChangesAsync())
                 {
-                    return Created("",_mapper.Map<PizzaModel>(pizza));
+                   var createdPizza = await _repository.GetPizzaAsync(System.Uri.UnescapeDataString(pizzaModel.PizzaName));
+                   return Created("",_mapper.Map<PizzaModel>(createdPizza));
                 };
 
                 return Ok();                
@@ -119,7 +120,8 @@ namespace ItalianoPizzaAPI.Controllers
 
                if(await _repository.SaveChangesAsync())
                {
-                   return _mapper.Map<PizzaModel>(existingPizza);
+                   var updatedPizza = await _repository.GetPizzaAsync(pizzaModel.PizzaName);
+                   return _mapper.Map<PizzaModel>(updatedPizza);
                }
             }
             catch (Exception ex)
