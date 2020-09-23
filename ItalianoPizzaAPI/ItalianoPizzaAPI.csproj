@@ -30,5 +30,8 @@
     <Content Include="Model\IngredientModel.cs" />
     <PackageReference Include="NSwag.AspNetCore" Version="13.7.4" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.1" />
+    <Content Include="Services\IPizzaService.cs" />
+    <Content Include="Services\PizzaService.cs" />
+    <Content Include="Exceptions\PizzaNotCreatedException.cs" />
   </ItemGroup>
 </Project>

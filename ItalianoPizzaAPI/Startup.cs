@@ -13,6 +13,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using AutoMapper;
+using ItalianoPizzaAPI.Services;
 
 namespace ItalianoPizzaAPI
 {
@@ -41,6 +42,8 @@ namespace ItalianoPizzaAPI
 
             services.AddSingleton(mapper);
 
+            services.AddScoped<IPizzaService,PizzaService>();
+            
             services.AddSwaggerDocument(config =>
             {
                 config.PostProcess = document =>

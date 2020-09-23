@@ -59,13 +59,24 @@ namespace ItalianoPizzaAPI.Data
            return await query.ToArrayAsync();
         }
 
-        public async Task<Pizza> GetPizzaAsync(string name)
+        public async Task<Pizza> GetPizzaAsync(int pizzaId)
         {
              _logger.LogInformation($"Getting all Pizzas");
 
            IQueryable<Pizza> query = _context.Pizzas.Include(c => c.PizzaIngredients).ThenInclude(i => i.Ingredient);
 
-           query = query.Where(p => p.Name == name);
+           query = query.Where(p => p.PizzaId == pizzaId);
+
+           return await query.FirstOrDefaultAsync();
+        }
+
+        public async Task<Pizza> GetPizzaAsync(string pizzaName)
+        {
+             _logger.LogInformation($"Getting all Pizzas");
+
+           IQueryable<Pizza> query = _context.Pizzas.Include(c => c.PizzaIngredients).ThenInclude(i => i.Ingredient);
+
+           query = query.Where(p => p.Name == pizzaName);
 
            return await query.FirstOrDefaultAsync();
         }

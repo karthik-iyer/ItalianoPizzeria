@@ -12,7 +12,9 @@ namespace ItalianoPizzaAPI.Data
 
         //Pizzas
         Task<Pizza[]> GetAllPizzasAsync();
-        Task<Pizza> GetPizzaAsync(string name);
+        Task<Pizza> GetPizzaAsync(int pizzaId);
+
+        Task<Pizza> GetPizzaAsync(string pizzaName);
 
         //Ingredients
          Task<Ingredient[]> GetAllIngredientsAsync();
