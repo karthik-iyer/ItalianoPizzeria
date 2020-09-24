@@ -26,7 +26,7 @@ namespace ItalianoPizzaAPI.Controllers
         {
             try
             {
-                return Ok(await _pizzaService.GetAllIngredientsAsync());          
+                return await _pizzaService.GetAllIngredientsAsync();          
             }
             catch (Exception)
             {

@@ -59,7 +59,7 @@ namespace ItalianoPizzaAPI.Services
                 return _mapper.Map<PizzaModel>(createdPizza);
             };
 
-            throw new PizzaNotCreatedException($"Pizza cannot be created. Pizza name {existingPizza.Name}");
+            throw new PizzaNotCreatedException($"Pizza cannot be created. Pizza name {pizzaModel.PizzaName}");
         }
 
         public async Task<PizzaModel> UpdatePizzaAsync(int pizzaId, PizzaModel pizzaModel)
@@ -82,7 +82,7 @@ namespace ItalianoPizzaAPI.Services
         {            
             var existingPizza = await _repository.GetPizzaAsync(pizzaId);
 
-            if(existingPizza == null) throw new PizzaNotFoundException($"Could not find Pizza with Name {existingPizza.Name}");
+            if(existingPizza == null) throw new PizzaNotFoundException($"Could not find Pizza with Id {pizzaId}");
 
             _repository.Delete(existingPizza);
 

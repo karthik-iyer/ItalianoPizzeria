@@ -1,0 +1,30 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f8aef8a1_002Dbfa2_002D4502_002Db34d_002D125f43398d9b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="GetAllIngredientsAsync_WhenSuccessful_ReturnsIngredients" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::7353BA99-34F2-42D5-8C81-C05259E5369B::.NETCoreApp,Version=v3.1::ItalianoPizzaAPITests.ControllerTests.IngredientsControllerTests.GetAllIngredientsAsync_WhenSuccessful_ReturnsIngredients&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::7353BA99-34F2-42D5-8C81-C05259E5369B::.NETCoreApp,Version=v3.1::ItalianoPizzaAPITests.ControllerTests.IngredientsControllerTests.GetAllIngredientsAsync_WhenUnsuccessful_ThrowsError&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::7353BA99-34F2-42D5-8C81-C05259E5369B::.NETCoreApp,Version=v3.1::ItalianoPizzaAPITests.PizzaControllerTests.GetAllPizzaAsync_WhenSuccessful_ReturnsAllPizzas&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::7353BA99-34F2-42D5-8C81-C05259E5369B::.NETCoreApp,Version=v3.1::ItalianoPizzaAPITests.ControllerTests.IngredientsControllerTests.GetAllIngredientsAsync_WhenNotSuccessful_ThrowsException&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::7353BA99-34F2-42D5-8C81-C05259E5369B::.NETCoreApp,Version=v3.1::ItalianoPizzaAPITests.PizzaControllerTests.GetAllPizzaAsync_WhenNotSuccessful_ReturnsInternalServerError&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::7353BA99-34F2-42D5-8C81-C05259E5369B::.NETCoreApp,Version=v3.1::ItalianoPizzaAPITests.PizzaControllerTests.GetPizzaByIdAsync_WhenSuccessful_ReturnsValidPizza&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::7353BA99-34F2-42D5-8C81-C05259E5369B::.NETCoreApp,Version=v3.1::ItalianoPizzaAPITests.PizzaControllerTests.GetPizzaByIdAsync_throwsPizzaNotFoundException_ReturnsBadRequest&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::7353BA99-34F2-42D5-8C81-C05259E5369B::.NETCoreApp,Version=v3.1::ItalianoPizzaAPITests.PizzaControllerTests.GetPizzaByIdAsync_throwsException_ReturnsInternalServerError&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::7353BA99-34F2-42D5-8C81-C05259E5369B::.NETCoreApp,Version=v3.1::ItalianoPizzaAPITests.PizzaControllerTests.PostAsync_throwsPizzaNotFoundException_ReturnsInternalServerError&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::7353BA99-34F2-42D5-8C81-C05259E5369B::.NETCoreApp,Version=v3.1::ItalianoPizzaAPITests.PizzaControllerTests.PostAsync_throwsException_ReturnsInternalServerError&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::7353BA99-34F2-42D5-8C81-C05259E5369B::.NETCoreApp,Version=v3.1::ItalianoPizzaAPITests.PizzaControllerTests.PostAsync_throwsPizzaNoCreatedException_ReturnsInternalServerError&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::7353BA99-34F2-42D5-8C81-C05259E5369B::.NETCoreApp,Version=v3.1::ItalianoPizzaAPITests.PizzaControllerTests.PostAsync_WhenSuccessful_ReturnsCreatedPizza&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::7353BA99-34F2-42D5-8C81-C05259E5369B::.NETCoreApp,Version=v3.1::ItalianoPizzaAPITests.PizzaControllerTests&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::7353BA99-34F2-42D5-8C81-C05259E5369B::.NETCoreApp,Version=v3.1::ItalianoPizzaAPITests.ServiceTests.PizzaServiceTests.GetAllPizzasAsync_WhenSuccessful_returns_PizzaModelArray&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::7353BA99-34F2-42D5-8C81-C05259E5369B::.NETCoreApp,Version=v3.1::ItalianoPizzaAPITests.ServiceTests.PizzaServiceTests.GetPizzaAsync_WhenUnSuccessful_returns_PizzaNotFoundException&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::7353BA99-34F2-42D5-8C81-C05259E5369B::.NETCoreApp,Version=v3.1::ItalianoPizzaAPITests.ServiceTests.PizzaServiceTests.GetAllIngredientsAsync_WhenSuccessful_returns_IngredientModelArray&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::7353BA99-34F2-42D5-8C81-C05259E5369B::.NETCoreApp,Version=v3.1::ItalianoPizzaAPITests.ServiceTests.PizzaServiceTests.CreateNewPizzaAsync_WhenUnSuccessful_returns_PizzaAlreadyExistsException&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::7353BA99-34F2-42D5-8C81-C05259E5369B::.NETCoreApp,Version=v3.1::ItalianoPizzaAPITests.ServiceTests.PizzaServiceTests.CreateNewPizzaAsync_WhenUnSuccessfulSave_returns_PizzaNotCreatedException&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::7353BA99-34F2-42D5-8C81-C05259E5369B::.NETCoreApp,Version=v3.1::ItalianoPizzaAPITests.ServiceTests.PizzaServiceTests.CreateNewPizzaAsync_WhenSuccessfulSave_returns_CreatedPizza&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::7353BA99-34F2-42D5-8C81-C05259E5369B::.NETCoreApp,Version=v3.1::ItalianoPizzaAPITests.ServiceTests.PizzaServiceTests.UpdatePizzaAsync_WhenUnSuccessful_returns_PizzaNotFoundException&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::7353BA99-34F2-42D5-8C81-C05259E5369B::.NETCoreApp,Version=v3.1::ItalianoPizzaAPITests.ServiceTests.PizzaServiceTests.UpdatePizzaAsync_WhenUnSuccessfulSave_returns_PizzaNotUpdatedException&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::7353BA99-34F2-42D5-8C81-C05259E5369B::.NETCoreApp,Version=v3.1::ItalianoPizzaAPITests.ServiceTests.PizzaServiceTests.UpdatePizzaAsync_WhenSuccessfulUpdate_returns_UpdatedPizza&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::7353BA99-34F2-42D5-8C81-C05259E5369B::.NETCoreApp,Version=v3.1::ItalianoPizzaAPITests.ServiceTests.PizzaServiceTests.DeletePizzaAsync_WhenUnSuccessful_returns_PizzaNotFoundException&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::7353BA99-34F2-42D5-8C81-C05259E5369B::.NETCoreApp,Version=v3.1::ItalianoPizzaAPITests.ServiceTests.PizzaServiceTests.DeletePizzaAsync_WhenUnSuccessfulDelete_returns_PizzaNotDeletedException&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::7353BA99-34F2-42D5-8C81-C05259E5369B::.NETCoreApp,Version=v3.1::ItalianoPizzaAPITests.ServiceTests.PizzaServiceTests.DeletePizzaAsync_WhenSuccessfulDelete_returns_SuccessfulDeletedMessage&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
