@@ -214,6 +214,47 @@ namespace ItalianoPizzaAPITests.ServiceTests
             Assert.That(() => _target.CreateNewPizzaAsync(pizzaModel), Throws.TypeOf<PizzaNotCreatedException>());
         }
 
+
+            [Test]
+            public async Task CreateNewPizzaAsync_WhenSuccessfulSave_returns_CreatedPizza()
+            {
+                //Arrange
+                var pizza = new Pizza()
+                {
+                    PizzaId = 1,
+                    Name = "Test Pizza",
+                    DoughType = "Sicilian",
+                    isCalzone = true,
+                    PizzaIngredients = new List<PizzaIngredient>()
+                };
+        
+                var pizzaModel = new PizzaModel()
+                {
+                    PizzaId = 1,
+                    PizzaName = "Test Pizza",
+                    DoughType = "Sicilian",
+                    IsCalzone = true,
+                    PizzaIngredientsModel = new List<PizzaIngredientsModel>()
+                };
+        
+                var expectedPizzaModel = new PizzaModel()
+                {
+                    PizzaId = 1,
+                    PizzaName = "Test Pizza",
+                    DoughType = "Sicilian",
+                    IsCalzone = true,
+                    PizzaIngredientsModel = new List<PizzaIngredientsModel>()
+                };
+                _pizzaRepository.Setup(x => x.GetPizzaAsync(pizzaModel.PizzaName)).ReturnsAsync(() => null);
+                _mapper.Setup(x => x.Map<Pizza>(pizzaModel)).Returns(pizza);
+                _pizzaRepository.Setup(x => x.Add(pizza)).Verifiable();
+                _pizzaRepository.Setup(x => x.SaveChangesAsync()).ReturnsAsync(true);
+                _pizzaRepository.Setup(x => x.GetPizzaAsync(It.IsAny<int>())).ReturnsAsync(pizza);
+                _mapper.Setup(x => x.Map<PizzaModel>(pizza)).Returns(pizzaModel);
+                //Assert
+                var actualPizzaModel = await _target.CreateNewPizzaAsync(pizzaModel);
+                actualPizzaModel.Should().BeEquivalentTo(expectedPizzaModel);
+            }
         [Test]
         public void UpdatePizzaAsync_WhenUnSuccessful_returns_PizzaNotFoundException()
         {

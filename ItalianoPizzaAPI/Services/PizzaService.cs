@@ -55,7 +55,7 @@ namespace ItalianoPizzaAPI.Services
             
             if(await _repository.SaveChangesAsync())
             {
-                var createdPizza = await _repository.GetPizzaAsync(System.Uri.UnescapeDataString(pizzaModel.PizzaName));
+                var createdPizza = await _repository.GetPizzaAsync(pizza.PizzaId);
                 return _mapper.Map<PizzaModel>(createdPizza);
             };
 
