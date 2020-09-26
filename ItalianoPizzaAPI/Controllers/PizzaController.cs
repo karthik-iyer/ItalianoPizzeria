@@ -131,7 +131,8 @@ namespace ItalianoPizzaAPI.Controllers
         {
             try
             {
-                return Ok(await _pizzaService.DeletePizzaAsync(PizzaId));
+                await _pizzaService.DeletePizzaAsync(PizzaId);
+                return Ok();
             }
             catch(PizzaNotFoundException ex)
             {

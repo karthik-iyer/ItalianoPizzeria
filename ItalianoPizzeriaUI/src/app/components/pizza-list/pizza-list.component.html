@@ -1,0 +1,48 @@
+<div class="list row">
+
+  <div class="col-md-6">
+    <h4>Pizza List</h4>
+    <ul class="list-group">
+      <li
+        class="list-group-item"
+        *ngFor="let pizza of pizzas; let i = index"
+        [class.active]="i == currentIndex"
+        (click)="setActivePizza(pizza, i)"
+      >
+        {{ pizza.pizzaName }}
+      </li>
+    </ul>
+  </div>
+  <div class="col-md-6">
+    <div *ngIf="currentPizza">
+      <h4>Pizza</h4>
+      <div>
+        <label><strong>PizzaName:</strong></label> {{ currentPizza.pizzaName }}
+      </div>
+      <div>
+        <label><strong>DoughType:</strong></label>
+        {{ currentPizza.doughType }}
+      </div>
+      <div>
+        <label><strong>Is Calzone:</strong></label>
+        {{ currentPizza.isCalzone ? "Yes" : "No" }}
+      </div>
+      <div class="col-md-6">
+        <h4>Ingredient List</h4>
+        <ul class="list-group">
+          <li
+            class="list-group-item"
+            *ngFor="let ingredient of currentPizza.pizzaIngredientsModel; let i = index">
+            {{ ingredient.ingredientName }}
+          </li>
+        </ul>
+      </div>
+      <a class="badge badge-pill badge-primary" routerLink="/pizzas/{{currentPizza.pizzaId }}">
+        Edit
+      </a>
+    </div>
+</div>
+<div class="col-md-12" *ngIf="!currentPizza">
+  <br />
+  <p>Please click on a Pizza Item to display pizza details</p>
+</div>

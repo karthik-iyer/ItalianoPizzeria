@@ -293,7 +293,7 @@ namespace ItalianoPizzaAPITests
             var actual = await _target.DeleteAsync(It.IsAny<int>());
             
             //Assert
-            (actual as OkObjectResult).Value.Should().BeEquivalentTo(string.Empty);
+            Assert.AreEqual((actual as OkResult).StatusCode, StatusCodes.Status200OK);
         }
     }
 }

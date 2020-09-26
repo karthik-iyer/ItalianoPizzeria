@@ -135,8 +135,7 @@ namespace ItalianoPizzaAPITests.ServiceTests
                 new IngredientModel()
                 {
                     IngredientId = 1,
-                    Name = "Onion",
-                    Type = "Veggie"
+                    Name = "Onion"
                 }
             };
 
@@ -144,8 +143,7 @@ namespace ItalianoPizzaAPITests.ServiceTests
                 new IngredientModel()
                 {
                     IngredientId = 1,
-                    Name = "Onion",
-                    Type = "Veggie"
+                    Name = "Onion"
                 }
             };
                 

@@ -1,0 +1,62 @@
+<div class="add-main">
+  <div class="submit-form">
+    <div *ngIf="!submitted">
+      <div class="form-group">
+        <label for="title">Pizza Name</label>
+        <input
+          type="text"
+          class="form-control"
+          required
+          [(ngModel)]="pizza.pizzaName"
+          name="pizzaName"
+        />
+      </div>
+      <div class="form-group">
+        <label for="title">Dough Type</label>
+        <div>
+          <ul class="list-group">
+                <li class="list-group-item"  *ngFor="let item of doughtypeList">
+                  <input type="radio" [(ngModel)]="pizza.doughType" name="list_name" value="{{item.value}}" (change)="onItemChange(item)"/>
+                  {{item.name}}
+                </li>
+          </ul>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="form-check">
+          <label class="form-check-label">
+             <input type="checkbox" name="isCalzone" [(ngModel)]="pizza.isCalzone"/> <span> Is Calzone ?</span>
+          </label>
+      </div>
+      </div>
+
+      <div class="form-group">
+        <div>
+          <label>Ingredients: </label>
+          <ng-select bindLabel="name"
+                appendTo="body"
+                placeholder="Select an Ingredient"
+                [items] = "pizzaIngredientList"
+                [multiple]="true"
+                [searchable]="true"
+                [clearable]="true"
+                [(ngModel)]="pizza.pizzaIngredientsModel" name="pizzaIngredientsModel">
+          </ng-select>
+        </div>
+
+      </div>
+
+      <button (click)="savePizza()" class="btn btn-success">Submit</button>
+      </div>
+
+      <div *ngIf="submitted">
+        <h4>You submitted successfully!</h4>
+        <button class="btn btn-success" (click)="newPizza()">Add</button>
+      </div>
+
+      <div *ngIf="isError">
+        <h4 class="text-danger">Pizza Name already exists. Pizza cannot be created.</h4>
+      </div>
+
+    </div>
+</div>
