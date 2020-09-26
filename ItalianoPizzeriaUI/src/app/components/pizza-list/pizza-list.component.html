@@ -5,7 +5,7 @@
     <ul class="list-group">
       <li
         class="list-group-item"
-        *ngFor="let pizza of pizzas; let i = index"
+        *ngFor="let pizza of pizzas | async; let i = index"
         [class.active]="i == currentIndex"
         (click)="setActivePizza(pizza, i)"
       >

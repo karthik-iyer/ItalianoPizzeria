@@ -24,8 +24,13 @@
   <component name="ChangeListManager">
     <list default="true" id="c7cd089f-6fdd-4909-a6c5-4697089ce756" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ItalianoPizzaria/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ItalianoPizzaria/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ItalianoPizzaAPITests/.idea/.idea.ItalianoPizzaAPITests.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ItalianoPizzaAPITests/.idea/.idea.ItalianoPizzaAPITests.dir/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ItalianoPizzaAPITests/.idea/.idea.ItalianoPizzaAPITests.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ItalianoPizzaAPITests/.idea/.idea.ItalianoPizzaAPITests.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ItalianoPizzeriaUI/src/app/components/add-pizza/add-pizza.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ItalianoPizzeriaUI/src/app/components/add-pizza/add-pizza.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ItalianoPizzeriaUI/src/app/components/add-pizza/add-pizza.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ItalianoPizzeriaUI/src/app/components/add-pizza/add-pizza.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ItalianoPizzeriaUI/src/app/components/pizza-details/pizza-details.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ItalianoPizzeriaUI/src/app/components/pizza-details/pizza-details.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ItalianoPizzeriaUI/src/app/services/pizza.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ItalianoPizzeriaUI/src/app/services/pizza.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ItalianoPizzeriaUI/src/app/components/pizza-list/pizza-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ItalianoPizzeriaUI/src/app/components/pizza-list/pizza-list.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ItalianoPizzeriaUI/src/app/components/pizza-list/pizza-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ItalianoPizzeriaUI/src/app/components/pizza-list/pizza-list.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,13 +41,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Users/karthikiyer/Sites/InterviewProjects/ItalianoPizzeria/ItalianoPizzaAPI/Controllers/PizzaController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/karthikiyer/Sites/InterviewProjects/ItalianoPizzeria/ItalianoPizzaAPI/Data/MappingProfile.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/karthikiyer/Sites/InterviewProjects/ItalianoPizzeria/ItalianoPizzaAPI/Model/IngredientModel.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/karthikiyer/Sites/InterviewProjects/ItalianoPizzeria/ItalianoPizzaAPITests/ControllerTests/PizzaControllerTests.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/.local/share/Symbols/src/nunit/nunit/c933a883ea25263ec575a654dae69fa38000edd9/src/NUnitFramework/framework/Internal/Execution/SimpleWorkItemDispatcher.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/karthikiyer/Sites/InterviewProjects/ItalianoPizzeria/ItalianoPizzaAPITests/ServiceTests/PizzaServiceTests.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/karthikiyer/Sites/InterviewProjects/ItalianoPizzeria/ItalianoPizzaAPI/Startup.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -116,7 +115,8 @@
       <workItem from="1600963794968" duration="1311000" />
       <workItem from="1601051968091" duration="2066000" />
       <workItem from="1601056990470" duration="3531000" />
-      <workItem from="1601092665067" duration="2159000" />
+      <workItem from="1601092665067" duration="2173000" />
+      <workItem from="1601137775453" duration="959000" />
     </task>
     <servers />
   </component>
@@ -147,38 +147,38 @@
     <state width="486" height="464" key="DebuggerActiveHint/-1307.-1057.1920.1057/613.-1057.2560.1057/0.23.1440.822@613.-1057.2560.1057" timestamp="1600894615665" />
     <state width="486" height="464" key="DebuggerActiveHint/-1307.-1057.1920.1057/613.-1057.2560.1057/0.23.1440.823@613.-1057.2560.1057" timestamp="1600923674314" />
     <state width="461" height="464" key="DebuggerActiveHint/-1307.-1057.1920.984/613.-1057.2560.1057/0.23.1440.877@613.-1057.2560.1057" timestamp="1600889090245" />
-    <state width="1048" height="256" key="GridCell.Tab.0.bottom" timestamp="1601096543323">
+    <state width="1258" height="288" key="GridCell.Tab.0.bottom" timestamp="1601141446786">
       <screen x="613" y="-1057" width="2560" height="1057" />
     </state>
     <state width="2518" height="353" key="GridCell.Tab.0.bottom/-1307.-1057.1920.1057/613.-1057.2560.1057/0.23.1440.822@613.-1057.2560.1057" timestamp="1600917527861" />
-    <state width="1048" height="256" key="GridCell.Tab.0.bottom/-1307.-1057.1920.1057/613.-1057.2560.1057/0.23.1440.823@613.-1057.2560.1057" timestamp="1601096543323" />
+    <state width="1258" height="288" key="GridCell.Tab.0.bottom/-1307.-1057.1920.1057/613.-1057.2560.1057/0.23.1440.823@613.-1057.2560.1057" timestamp="1601141446786" />
     <state width="2518" height="263" key="GridCell.Tab.0.bottom/-1307.-1057.1920.1057/613.-1057.2560.1057/0.23.1440.825@613.-1057.2560.1057" timestamp="1600926101655" />
     <state width="2097" height="256" key="GridCell.Tab.0.bottom/-1307.-1057.1920.1057/613.-1057.2560.977/0.23.1440.877@613.-1057.2560.977" timestamp="1601058114780" />
     <state width="2518" height="385" key="GridCell.Tab.0.bottom/-1307.-1057.1920.984/613.-1057.2560.1057/0.23.1440.877@613.-1057.2560.1057" timestamp="1600889165395" />
     <state width="1048" height="256" key="GridCell.Tab.0.bottom/-1307.-1057.1920.986/613.-1057.2560.1057/0.23.1440.877@613.-1057.2560.1057" timestamp="1601092171131" />
-    <state width="1048" height="256" key="GridCell.Tab.0.center" timestamp="1601096543322">
+    <state width="1258" height="288" key="GridCell.Tab.0.center" timestamp="1601141446785">
       <screen x="613" y="-1057" width="2560" height="1057" />
     </state>
     <state width="2518" height="353" key="GridCell.Tab.0.center/-1307.-1057.1920.1057/613.-1057.2560.1057/0.23.1440.822@613.-1057.2560.1057" timestamp="1600917527859" />
-    <state width="1048" height="256" key="GridCell.Tab.0.center/-1307.-1057.1920.1057/613.-1057.2560.1057/0.23.1440.823@613.-1057.2560.1057" timestamp="1601096543322" />
+    <state width="1258" height="288" key="GridCell.Tab.0.center/-1307.-1057.1920.1057/613.-1057.2560.1057/0.23.1440.823@613.-1057.2560.1057" timestamp="1601141446785" />
     <state width="2518" height="263" key="GridCell.Tab.0.center/-1307.-1057.1920.1057/613.-1057.2560.1057/0.23.1440.825@613.-1057.2560.1057" timestamp="1600926101654" />
     <state width="2097" height="256" key="GridCell.Tab.0.center/-1307.-1057.1920.1057/613.-1057.2560.977/0.23.1440.877@613.-1057.2560.977" timestamp="1601058114779" />
     <state width="2518" height="385" key="GridCell.Tab.0.center/-1307.-1057.1920.984/613.-1057.2560.1057/0.23.1440.877@613.-1057.2560.1057" timestamp="1600889165394" />
     <state width="1048" height="256" key="GridCell.Tab.0.center/-1307.-1057.1920.986/613.-1057.2560.1057/0.23.1440.877@613.-1057.2560.1057" timestamp="1601092171128" />
-    <state width="1048" height="256" key="GridCell.Tab.0.left" timestamp="1601096543321">
+    <state width="1258" height="288" key="GridCell.Tab.0.left" timestamp="1601141446783">
       <screen x="613" y="-1057" width="2560" height="1057" />
     </state>
     <state width="2518" height="353" key="GridCell.Tab.0.left/-1307.-1057.1920.1057/613.-1057.2560.1057/0.23.1440.822@613.-1057.2560.1057" timestamp="1600917527858" />
-    <state width="1048" height="256" key="GridCell.Tab.0.left/-1307.-1057.1920.1057/613.-1057.2560.1057/0.23.1440.823@613.-1057.2560.1057" timestamp="1601096543321" />
+    <state width="1258" height="288" key="GridCell.Tab.0.left/-1307.-1057.1920.1057/613.-1057.2560.1057/0.23.1440.823@613.-1057.2560.1057" timestamp="1601141446783" />
     <state width="2518" height="263" key="GridCell.Tab.0.left/-1307.-1057.1920.1057/613.-1057.2560.1057/0.23.1440.825@613.-1057.2560.1057" timestamp="1600926101654" />
     <state width="2097" height="256" key="GridCell.Tab.0.left/-1307.-1057.1920.1057/613.-1057.2560.977/0.23.1440.877@613.-1057.2560.977" timestamp="1601058114778" />
     <state width="2518" height="385" key="GridCell.Tab.0.left/-1307.-1057.1920.984/613.-1057.2560.1057/0.23.1440.877@613.-1057.2560.1057" timestamp="1600889165392" />
     <state width="1048" height="256" key="GridCell.Tab.0.left/-1307.-1057.1920.986/613.-1057.2560.1057/0.23.1440.877@613.-1057.2560.1057" timestamp="1601092171127" />
-    <state width="1048" height="256" key="GridCell.Tab.0.right" timestamp="1601096543322">
+    <state width="1258" height="288" key="GridCell.Tab.0.right" timestamp="1601141446785">
       <screen x="613" y="-1057" width="2560" height="1057" />
     </state>
     <state width="2518" height="353" key="GridCell.Tab.0.right/-1307.-1057.1920.1057/613.-1057.2560.1057/0.23.1440.822@613.-1057.2560.1057" timestamp="1600917527860" />
-    <state width="1048" height="256" key="GridCell.Tab.0.right/-1307.-1057.1920.1057/613.-1057.2560.1057/0.23.1440.823@613.-1057.2560.1057" timestamp="1601096543322" />
+    <state width="1258" height="288" key="GridCell.Tab.0.right/-1307.-1057.1920.1057/613.-1057.2560.1057/0.23.1440.823@613.-1057.2560.1057" timestamp="1601141446785" />
     <state width="2518" height="263" key="GridCell.Tab.0.right/-1307.-1057.1920.1057/613.-1057.2560.1057/0.23.1440.825@613.-1057.2560.1057" timestamp="1600926101655" />
     <state width="2097" height="256" key="GridCell.Tab.0.right/-1307.-1057.1920.1057/613.-1057.2560.977/0.23.1440.877@613.-1057.2560.977" timestamp="1601058114779" />
     <state width="2518" height="385" key="GridCell.Tab.0.right/-1307.-1057.1920.984/613.-1057.2560.1057/0.23.1440.877@613.-1057.2560.1057" timestamp="1600889165395" />
@@ -489,19 +489,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/ItalianoPizzaAPI/Startup.cs</url>
-          <line>83</line>
-          <properties documentPath="$PROJECT_DIR$/ItalianoPizzaAPI/Startup.cs" initialLine="83">
-            <startOffsets>
-              <option value="2972" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3073" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/ItalianoPizzaAPITests/ControllerTests/PizzaControllerTests.cs</url>

@@ -36,7 +36,7 @@
           <ng-select bindLabel="name"
                 appendTo="body"
                 placeholder="Select an Ingredient"
-                [items] = "pizzaIngredientList"
+                [items] = "pizzaIngredientList | async"
                 [multiple]="true"
                 [searchable]="true"
                 [clearable]="true"

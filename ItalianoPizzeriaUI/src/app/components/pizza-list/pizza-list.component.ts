@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { PizzaModel } from 'src/app/api';
 import {PizzaService } from '../../services/pizza.service';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-pizza-list',
@@ -7,8 +9,8 @@ import {PizzaService } from '../../services/pizza.service';
   styleUrls: ['./pizza-list.component.css']
 })
 export class PizzaListComponent implements OnInit {
-  pizzas: any;
-  currentPizza = null;
+  pizzas: Observable<PizzaModel[]>;
+  currentPizza: PizzaModel;
   currentIndex = -1;
 
   constructor(private pizzaService: PizzaService) { }
@@ -18,15 +20,7 @@ export class PizzaListComponent implements OnInit {
   }
 
   getAllPizzas(): void{
-    this.pizzaService.getAllPizza()
-      .subscribe(
-          data => {
-            this.pizzas = data;
-            console.log(data);
-          },
-          error =>{
-            console.log(error);
-          });
+   this.pizzas = this.pizzaService.getAllPizza();
   }
 
   setActivePizza(pizza, index): void {

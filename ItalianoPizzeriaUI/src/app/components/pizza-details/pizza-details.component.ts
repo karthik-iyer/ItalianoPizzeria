@@ -3,7 +3,7 @@ import { PizzaService } from '../../services/pizza.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import {DoughType} from '../../models/doughType';
 import {DOUGHTYPEDATA} from '../../models/doughtType-data';
-import { IngredientModel } from 'src/app/api/model/models';
+import { IngredientModel, PizzaModel } from 'src/app/api/model/models';
 import { from, Observable } from 'rxjs';
 import {tap} from 'rxjs/operators';
 @Component({

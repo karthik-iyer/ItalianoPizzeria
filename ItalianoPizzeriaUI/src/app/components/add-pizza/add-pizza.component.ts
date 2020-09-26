@@ -3,7 +3,8 @@ import { PizzaService } from 'src/app/services/pizza.service';
 
 import {DoughType} from '../../models/doughType';
 import {DOUGHTYPEDATA} from '../../models/doughtType-data';
-
+import { IngredientModel } from 'src/app/api';
+import {Observable} from 'rxjs';
 @Component({
   selector: 'app-add-pizza',
   templateUrl: './add-pizza.component.html',
@@ -19,7 +20,7 @@ export class AddPizzaComponent implements OnInit {
     pizzaIngredientsModel: []
   }
 
-  pizzaIngredientList = [];
+  pizzaIngredientList: Observable<IngredientModel[]>;
   doughtypeList: DoughType[] = DOUGHTYPEDATA;
   radioSel:any;
   radioSelected:string;
@@ -29,7 +30,6 @@ export class AddPizzaComponent implements OnInit {
       this.doughtypeList = DOUGHTYPEDATA;
       this.radioSelected = "New York Style"
       this.getSelectedItem();
-      this.pizzaIngredientList = [];
    }
 
   ngOnInit(): void {
@@ -77,13 +77,6 @@ export class AddPizzaComponent implements OnInit {
   }
 
   retrieveIngredients(): void {
-    this.pizzaService.getAllIngredients()
-      .subscribe(
-        data => {
-          this.pizzaIngredientList = data;
-        },
-        error => {
-          console.log(error);
-        });
+   this.pizzaIngredientList = this.pizzaService.getAllIngredients();
   }
 }

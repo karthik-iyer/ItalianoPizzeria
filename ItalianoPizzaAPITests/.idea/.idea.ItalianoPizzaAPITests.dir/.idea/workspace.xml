@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f83a977-5de1-493f-843f-7a29aae78d32" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../ItalianoPizzaAPI/ItalianoPizzaAPI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../ItalianoPizzaAPI/ItalianoPizzaAPI.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ItalianoPizzaAPITests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ItalianoPizzaAPITests.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.idea.ItalianoPizzaria/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.idea.ItalianoPizzaria/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +41,7 @@
       <updated>1600876129851</updated>
       <workItem from="1600876141170" duration="1743000" />
       <workItem from="1600879700756" duration="61000" />
+      <workItem from="1601137644426" duration="97000" />
     </task>
     <servers />
   </component>
