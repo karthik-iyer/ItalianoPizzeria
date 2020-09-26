@@ -23,56 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7cd089f-6fdd-4909-a6c5-4697089ce756" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ItalianoPizzeriaUI/.browserslistrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ItalianoPizzeriaUI/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ItalianoPizzeriaUI/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ItalianoPizzeriaUI/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ItalianoPizzeriaUI/angular.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ItalianoPizzeriaUI/e2e/protractor.conf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ItalianoPizzeriaUI/e2e/src/app.e2e-spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ItalianoPizzeriaUI/e2e/src/app.po.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ItalianoPizzeriaUI/e2e/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ItalianoPizzeriaUI/karma.conf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ItalianoPizzeriaUI/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ItalianoPizzeriaUI/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ItalianoPizzeriaUI/src/app/app-routing.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ItalianoPizzeriaUI/src/app/app.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ItalianoPizzeriaUI/src/app/app.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ItalianoPizzeriaUI/src/app/app.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ItalianoPizzeriaUI/src/app/app.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ItalianoPizzeriaUI/src/app/components/add-pizza/add-pizza.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ItalianoPizzeriaUI/src/app/components/add-pizza/add-pizza.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ItalianoPizzeriaUI/src/app/components/add-pizza/add-pizza.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ItalianoPizzeriaUI/src/app/components/pizza-details/pizza-details.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ItalianoPizzeriaUI/src/app/components/pizza-details/pizza-details.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ItalianoPizzeriaUI/src/app/components/pizza-details/pizza-details.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ItalianoPizzeriaUI/src/app/components/pizza-list/pizza-list.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ItalianoPizzeriaUI/src/app/components/pizza-list/pizza-list.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ItalianoPizzeriaUI/src/app/components/pizza-list/pizza-list.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ItalianoPizzeriaUI/src/app/models/doughType.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ItalianoPizzeriaUI/src/app/models/doughtType-data.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ItalianoPizzeriaUI/src/app/services/pizza.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ItalianoPizzeriaUI/src/assets/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ItalianoPizzeriaUI/src/environments/environment.prod.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ItalianoPizzeriaUI/src/environments/environment.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ItalianoPizzeriaUI/src/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ItalianoPizzeriaUI/src/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ItalianoPizzeriaUI/src/main.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ItalianoPizzeriaUI/src/polyfills.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ItalianoPizzeriaUI/src/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ItalianoPizzeriaUI/src/test.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ItalianoPizzeriaUI/tsconfig.app.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ItalianoPizzeriaUI/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ItalianoPizzeriaUI/tsconfig.spec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ItalianoPizzeriaUI/tslint.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ItalianoPizzaria/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ItalianoPizzaria/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ItalianoPizzaAPI/Controllers/PizzaController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ItalianoPizzaAPI/Controllers/PizzaController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ItalianoPizzaAPI/Data/MappingProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ItalianoPizzaAPI/Data/MappingProfile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ItalianoPizzaAPI/Model/IngredientModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ItalianoPizzaAPI/Model/IngredientModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ItalianoPizzaAPI/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ItalianoPizzaAPI/Properties/launchSettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ItalianoPizzaAPI/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ItalianoPizzaAPI/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ItalianoPizzaAPITests/ControllerTests/PizzaControllerTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ItalianoPizzaAPITests/ControllerTests/PizzaControllerTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ItalianoPizzaAPITests/ServiceTests/PizzaServiceTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ItalianoPizzaAPITests/ServiceTests/PizzaServiceTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ItalianoPizzeriaUI/src/app/components/pizza-details/pizza-details.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ItalianoPizzeriaUI/src/app/components/pizza-details/pizza-details.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ItalianoPizzeriaUI/src/app/services/pizza.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ItalianoPizzeriaUI/src/app/services/pizza.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +116,7 @@
       <workItem from="1600963794968" duration="1311000" />
       <workItem from="1601051968091" duration="2066000" />
       <workItem from="1601056990470" duration="3531000" />
-      <workItem from="1601092665067" duration="1527000" />
+      <workItem from="1601092665067" duration="2159000" />
     </task>
     <servers />
   </component>
@@ -194,38 +147,38 @@
     <state width="486" height="464" key="DebuggerActiveHint/-1307.-1057.1920.1057/613.-1057.2560.1057/0.23.1440.822@613.-1057.2560.1057" timestamp="1600894615665" />
     <state width="486" height="464" key="DebuggerActiveHint/-1307.-1057.1920.1057/613.-1057.2560.1057/0.23.1440.823@613.-1057.2560.1057" timestamp="1600923674314" />
     <state width="461" height="464" key="DebuggerActiveHint/-1307.-1057.1920.984/613.-1057.2560.1057/0.23.1440.877@613.-1057.2560.1057" timestamp="1600889090245" />
-    <state width="1048" height="256" key="GridCell.Tab.0.bottom" timestamp="1601095930086">
+    <state width="1048" height="256" key="GridCell.Tab.0.bottom" timestamp="1601096543323">
       <screen x="613" y="-1057" width="2560" height="1057" />
     </state>
     <state width="2518" height="353" key="GridCell.Tab.0.bottom/-1307.-1057.1920.1057/613.-1057.2560.1057/0.23.1440.822@613.-1057.2560.1057" timestamp="1600917527861" />
-    <state width="1048" height="256" key="GridCell.Tab.0.bottom/-1307.-1057.1920.1057/613.-1057.2560.1057/0.23.1440.823@613.-1057.2560.1057" timestamp="1601095930086" />
+    <state width="1048" height="256" key="GridCell.Tab.0.bottom/-1307.-1057.1920.1057/613.-1057.2560.1057/0.23.1440.823@613.-1057.2560.1057" timestamp="1601096543323" />
     <state width="2518" height="263" key="GridCell.Tab.0.bottom/-1307.-1057.1920.1057/613.-1057.2560.1057/0.23.1440.825@613.-1057.2560.1057" timestamp="1600926101655" />
     <state width="2097" height="256" key="GridCell.Tab.0.bottom/-1307.-1057.1920.1057/613.-1057.2560.977/0.23.1440.877@613.-1057.2560.977" timestamp="1601058114780" />
     <state width="2518" height="385" key="GridCell.Tab.0.bottom/-1307.-1057.1920.984/613.-1057.2560.1057/0.23.1440.877@613.-1057.2560.1057" timestamp="1600889165395" />
     <state width="1048" height="256" key="GridCell.Tab.0.bottom/-1307.-1057.1920.986/613.-1057.2560.1057/0.23.1440.877@613.-1057.2560.1057" timestamp="1601092171131" />
-    <state width="1048" height="256" key="GridCell.Tab.0.center" timestamp="1601095930082">
+    <state width="1048" height="256" key="GridCell.Tab.0.center" timestamp="1601096543322">
       <screen x="613" y="-1057" width="2560" height="1057" />
     </state>
     <state width="2518" height="353" key="GridCell.Tab.0.center/-1307.-1057.1920.1057/613.-1057.2560.1057/0.23.1440.822@613.-1057.2560.1057" timestamp="1600917527859" />
-    <state width="1048" height="256" key="GridCell.Tab.0.center/-1307.-1057.1920.1057/613.-1057.2560.1057/0.23.1440.823@613.-1057.2560.1057" timestamp="1601095930082" />
+    <state width="1048" height="256" key="GridCell.Tab.0.center/-1307.-1057.1920.1057/613.-1057.2560.1057/0.23.1440.823@613.-1057.2560.1057" timestamp="1601096543322" />
     <state width="2518" height="263" key="GridCell.Tab.0.center/-1307.-1057.1920.1057/613.-1057.2560.1057/0.23.1440.825@613.-1057.2560.1057" timestamp="1600926101654" />
     <state width="2097" height="256" key="GridCell.Tab.0.center/-1307.-1057.1920.1057/613.-1057.2560.977/0.23.1440.877@613.-1057.2560.977" timestamp="1601058114779" />
     <state width="2518" height="385" key="GridCell.Tab.0.center/-1307.-1057.1920.984/613.-1057.2560.1057/0.23.1440.877@613.-1057.2560.1057" timestamp="1600889165394" />
     <state width="1048" height="256" key="GridCell.Tab.0.center/-1307.-1057.1920.986/613.-1057.2560.1057/0.23.1440.877@613.-1057.2560.1057" timestamp="1601092171128" />
-    <state width="1048" height="256" key="GridCell.Tab.0.left" timestamp="1601095930080">
+    <state width="1048" height="256" key="GridCell.Tab.0.left" timestamp="1601096543321">
       <screen x="613" y="-1057" width="2560" height="1057" />
     </state>
     <state width="2518" height="353" key="GridCell.Tab.0.left/-1307.-1057.1920.1057/613.-1057.2560.1057/0.23.1440.822@613.-1057.2560.1057" timestamp="1600917527858" />
-    <state width="1048" height="256" key="GridCell.Tab.0.left/-1307.-1057.1920.1057/613.-1057.2560.1057/0.23.1440.823@613.-1057.2560.1057" timestamp="1601095930080" />
+    <state width="1048" height="256" key="GridCell.Tab.0.left/-1307.-1057.1920.1057/613.-1057.2560.1057/0.23.1440.823@613.-1057.2560.1057" timestamp="1601096543321" />
     <state width="2518" height="263" key="GridCell.Tab.0.left/-1307.-1057.1920.1057/613.-1057.2560.1057/0.23.1440.825@613.-1057.2560.1057" timestamp="1600926101654" />
     <state width="2097" height="256" key="GridCell.Tab.0.left/-1307.-1057.1920.1057/613.-1057.2560.977/0.23.1440.877@613.-1057.2560.977" timestamp="1601058114778" />
     <state width="2518" height="385" key="GridCell.Tab.0.left/-1307.-1057.1920.984/613.-1057.2560.1057/0.23.1440.877@613.-1057.2560.1057" timestamp="1600889165392" />
     <state width="1048" height="256" key="GridCell.Tab.0.left/-1307.-1057.1920.986/613.-1057.2560.1057/0.23.1440.877@613.-1057.2560.1057" timestamp="1601092171127" />
-    <state width="1048" height="256" key="GridCell.Tab.0.right" timestamp="1601095930084">
+    <state width="1048" height="256" key="GridCell.Tab.0.right" timestamp="1601096543322">
       <screen x="613" y="-1057" width="2560" height="1057" />
     </state>
     <state width="2518" height="353" key="GridCell.Tab.0.right/-1307.-1057.1920.1057/613.-1057.2560.1057/0.23.1440.822@613.-1057.2560.1057" timestamp="1600917527860" />
-    <state width="1048" height="256" key="GridCell.Tab.0.right/-1307.-1057.1920.1057/613.-1057.2560.1057/0.23.1440.823@613.-1057.2560.1057" timestamp="1601095930084" />
+    <state width="1048" height="256" key="GridCell.Tab.0.right/-1307.-1057.1920.1057/613.-1057.2560.1057/0.23.1440.823@613.-1057.2560.1057" timestamp="1601096543322" />
     <state width="2518" height="263" key="GridCell.Tab.0.right/-1307.-1057.1920.1057/613.-1057.2560.1057/0.23.1440.825@613.-1057.2560.1057" timestamp="1600926101655" />
     <state width="2097" height="256" key="GridCell.Tab.0.right/-1307.-1057.1920.1057/613.-1057.2560.977/0.23.1440.877@613.-1057.2560.977" timestamp="1601058114779" />
     <state width="2518" height="385" key="GridCell.Tab.0.right/-1307.-1057.1920.984/613.-1057.2560.1057/0.23.1440.877@613.-1057.2560.1057" timestamp="1600889165395" />

@@ -3,7 +3,9 @@ import { PizzaService } from '../../services/pizza.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import {DoughType} from '../../models/doughType';
 import {DOUGHTYPEDATA} from '../../models/doughtType-data';
-
+import { IngredientModel } from 'src/app/api/model/models';
+import { from, Observable } from 'rxjs';
+import {tap} from 'rxjs/operators';
 @Component({
   selector: 'app-pizza-details',
   templateUrl: './pizza-details.component.html',
@@ -16,7 +18,6 @@ export class PizzaDetailsComponent implements OnInit {
   radioSel:any;
   radioSelected:string;
   pizzaIngredientList = [];
-
 
   constructor(private pizzaService: PizzaService,
     private route: ActivatedRoute,

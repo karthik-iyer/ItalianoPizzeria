@@ -1,0 +1,272 @@
+{
+  "x-generator": "NSwag v13.7.4.0 (NJsonSchema v10.1.26.0 (Newtonsoft.Json v9.0.0.0))",
+  "swagger": "2.0",
+  "info": {
+    "title": "Italiano Pizza",
+    "description": "Italiano Pizzeria API to add new Pizzas",
+    "termsOfService": "None",
+    "contact": {
+      "name": "Karthik Iyer",
+      "url": "https://www.linkedin.com/in/karthikiyer1304",
+      "email": ""
+    },
+    "license": {
+      "name": "Open Source",
+      "url": ""
+    },
+    "version": "v1"
+  },
+  "host": "localhost:5001",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/api/Ingredients": {
+      "get": {
+        "tags": [
+          "Ingredients"
+        ],
+        "operationId": "Ingredients_GetAllIngredients",
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/IngredientModel"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Pizza": {
+      "get": {
+        "tags": [
+          "Pizza"
+        ],
+        "operationId": "Pizza_GetAllPizzas",
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/PizzaModel"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Pizza"
+        ],
+        "operationId": "Pizza_Post",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "pizzaModel",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/PizzaModel"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/PizzaModel"
+            }
+          }
+        }
+      }
+    },
+    "/api/Pizza/{PizzaId}": {
+      "get": {
+        "tags": [
+          "Pizza"
+        ],
+        "operationId": "Pizza_GetPizzaById",
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "PizzaId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/PizzaModel"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Pizza"
+        ],
+        "operationId": "Pizza_Put",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "PizzaId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "name": "pizzaModel",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/PizzaModel"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/PizzaModel"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Pizza"
+        ],
+        "operationId": "Pizza_Delete",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "PizzaId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "IngredientModel": {
+      "type": "object",
+      "required": [
+        "ingredientId"
+      ],
+      "properties": {
+        "ingredientId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "PizzaModel": {
+      "type": "object",
+      "required": [
+        "pizzaId",
+        "isCalzone"
+      ],
+      "properties": {
+        "pizzaId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "pizzaName": {
+          "type": "string"
+        },
+        "doughType": {
+          "type": "string"
+        },
+        "isCalzone": {
+          "type": "boolean"
+        },
+        "pizzaIngredientsModel": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PizzaIngredientsModel"
+          }
+        }
+      }
+    },
+    "PizzaIngredientsModel": {
+      "type": "object",
+      "required": [
+        "ingredientId"
+      ],
+      "properties": {
+        "ingredientId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "ingredientName": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
